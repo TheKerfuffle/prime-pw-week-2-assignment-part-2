@@ -158,16 +158,13 @@ if (mix === true) {
 // -- they are so we console.log 'throw away the food!'
 
 /*
-//FIX - If we are setting time to be a variable we need to use let rather than const
-//      since const creates a constant not a variable
-// Should be:
-// let time = 4;
 
 let temp = 40;
 const time = 4;
 
 // FIX - the || or operator should be the && and operator if we want to check for both conditions
 // should be:
+//
 //if (temp > 39 && time >= 4) {
 //  console.log('throw away the food!');
 // }
@@ -183,12 +180,20 @@ if (temp > 39 || time >= 4) {
 
 /*
 
-// FIX - if we want minAge to be a variable we need to use the command let rather than constant
-// should be:
-// let minAge = 21;
-
 let age = 21;
 const minAge = 21;
+
+// FIX - The condition not going to give us the desired console.log as it is
+//    checking whether minAge is less than or equal to age,
+//    not whether age is greater than or equal to minAge
+//    Also, We need to swap the 'no entry' and 'enter' console.logs
+//
+// it should instead be:
+//  if(age >= minAge) {
+//  console.log('enter');
+// } else {
+//  console.log('no entry');
+// }
 
 if(minAge <= age) {
   console.log('no entry');
