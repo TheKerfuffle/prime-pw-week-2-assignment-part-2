@@ -50,9 +50,9 @@ if (name === 'Mary') {
 // We then check to see if the code is exactly the number 123,
 // since it is we assign the variable secret the string 'super'.
 // We also multiply the variable code by 2 and assign it to that value, making it 246
-// We then check to see if the value of code is greater than 250 which it is so
-// We assign a new value to the variable secret making it 'duper'
-// Then we log the value of secret to the console, meaning the console should spit out 'duper'
+// We then check to see if the value of code is greater than 250 which it is NOT so...
+// We DO NOT assign a new value to the variable secret
+// Then we log the value of secret to the console, meaning the console should spit out 'super'
 
 //CODE
 /*
@@ -179,21 +179,20 @@ if (temp > 39 || time >= 4) {
 // -- they are, so we console.log 'enter'.
 
 /*
-
-let age = 21;
-const minAge = 21;
-
-// FIX - The condition not going to give us the desired console.log as it is
-//    checking whether minAge is less than or equal to age,
-//    not whether age is greater than or equal to minAge
-//    Also, We need to swap the 'no entry' and 'enter' console.logs
+// FIX - The condition not going to give us the desired console.log.
+//      We need to swap the 'no entry' and 'enter' console.logs in order
+//      to satisfy our goal of keeping out underage people.
 //
 // it should instead be:
-//  if(age >= minAge) {
+//  if(minAge <= age) {
 //  console.log('enter');
 // } else {
 //  console.log('no entry');
 // }
+
+
+let age = 21;
+const minAge = 21;
 
 if(minAge <= age) {
   console.log('no entry');
